@@ -1,3 +1,5 @@
+version: "3.9"
+
 services:
   php:
     build: ./www
@@ -15,10 +17,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 12345
       MYSQL_DATABASE: userdb
-      MYSQL_USER: root
-      MYSQL_PASSWORD: 12345
     ports:
-      - "3307:3306"   # غيرت هنا من 3306 إلى 3307
+      - "3307:3306"  # تغيير منفذ MySQL على جهازك (إذا كان 3306 محجوز)
     volumes:
       - mysql_data:/var/lib/mysql
     networks:
