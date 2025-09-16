@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   php:
     build: ./www
@@ -20,7 +18,7 @@ services:
       MYSQL_USER: root
       MYSQL_PASSWORD: 12345
     ports:
-      - "3306:3306"
+      - "3307:3306"   # غيرت هنا من 3306 إلى 3307
     volumes:
       - mysql_data:/var/lib/mysql
     networks:
